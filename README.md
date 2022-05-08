@@ -6,6 +6,7 @@ Once bot its running, first thing it does is extract btc OHLC values and transfe
 After 3 candles on the dataframe, bot can now start looking for pattern
 
 Pattern on uptrend will be : 1 red candle and 2 green candles. 
+
 Pattern on downtrend will be : 1 green candle and 2 red candles. 
 
 
