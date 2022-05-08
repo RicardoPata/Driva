@@ -49,7 +49,7 @@ while True:
     
     
     # Vars INT
-    Dif_HL_val = 0.01 # este dif e para achar a diferenca entre high e low
+    Dif_HL_val = 0.9 # este dif e para achar a diferenca entre high e low
 
     WebFail_Time = 0
     WebFail_BTC_Time = 0
@@ -91,9 +91,10 @@ while True:
         # print ("Web_Requests_Candles: ",Web_Requests_Candles)
 
         try: # Candle Stick data frame
-                        # collect the candlestick data from Binance >
-            #binance = ccxt.binance()
-            binance = ccxt.binance({ 'options': { 'defaultType': 'future' } })
+        
+            # collect the candlestick data from Binance >
+            binance = ccxt.binance()
+            #binance = ccxt.binance({ 'options': { 'defaultType': 'future' } })
             trading_pair = 'BTC/USDT'
             candles = binance.fetch_ohlcv(trading_pair, '5m')
             dates = []
@@ -262,10 +263,10 @@ while True:
                     # mail = smtplib.SMTP("smtp.gmail.com",587)
                     # mail.ehlo()
                     # mail.starttls()
-                    # mail.login("drivabot@gmail.com","bottdriva")
+                    # mail.login("email","password")
                     # content = 'Subject: {}\n\n{}'.format(content, content)
-                    # mail.sendmail("drivabot@gmail.com", "drivabot@gmail.com", content)
-                    # mail.sendmail("drivabot@gmail.com", "limpo.cardio@gmail.com", content)
+                    # mail.sendmail("from email", "toemail", content)
+                    # mail.sendmail("from email", "toemail", content)
                     # mail.close()
                     
                     print("\nenviou mail ENTRY SHORT" '\RGG','\nDiferenca %: ', Dif_RGG,'\nResultado Retraement: ', Rtrc_RGG_Res,'\nBTC Live Price: ',BtcPriceNow,"\n",datetime.now())
@@ -397,10 +398,10 @@ while True:
                     # mail = smtplib.SMTP("smtp.gmail.com",587)
                     # mail.ehlo()
                     # mail.starttls()
-                    # mail.login("drivabot@gmail.com","bottdriva")
+                    # mail.login("email","password")
                     # content = 'Subject: {}\n\n{}'.format(content, content)
-                    # mail.sendmail("drivabot@gmail.com", "drivabot@gmail.com", content)
-                    # mail.sendmail("drivabot@gmail.com", "limpo.cardio@gmail.com", content)
+                    # mail.sendmail("from email", "toemail", content)
+                    # mail.sendmail("from email", "toemail", content)
                     # mail.close()
                     # print("enviou mail ENTRY LONG\nDiferenca %: ", Dif_GRR,'\nResultado Retraement: ', Rtrc_GRR_Res,'\nBTC Live Price: ',BtcPriceNow,"\n",datetime.now())
                
