@@ -14,3 +14,7 @@ If this pattern is found, calculate percentual difference between lowest and hig
 
 This bot will use CCXT library to get live BTC/USD price
 
+----
+
+New updates soon - re code again to clean it, very messy at the moment
+
